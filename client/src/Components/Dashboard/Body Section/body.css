@@ -1,0 +1,39 @@
+:root {
+  --primaryColor: hsl(94,55%,56%);
+  --hoverColor: hsl(93,75%,76%);
+  --paleGreen: hsl(96,75%,89%);
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(0,0%,18%);
+  --textcolor: hsl(240,1%,48%);
+  --greyText: hsl(0,0%,75%);
+  --bgColor: hsl(120, 6%, 93%);
+  --inputColor: hsl(330,12%,97%);
+  --itemCardColor: hsl(120,5%,88%);
+  --itemCardHover: hsl(120,27%,87%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.mainContent {
+  width: 82%;
+  height: 100%;
+  padding: 2rem;
+  overflow: auto;
+  background: var(--bgColor);
+}
+.mainContent .bottom {
+  margin-top: 2rem;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 918px) {
+  .bottom {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=body.css.map */
