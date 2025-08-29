@@ -21,30 +21,42 @@ const Register = () => {
 
   // Fonction d'envoi
   const createUser = async (event) => {
-    event.preventDefault(); // Empêche le rechargement de la page
-    console.log("Form submitted ✅", { email, username, password });
+  event.preventDefault();
+  setError(""); // reset erreur
+  console.log("Form submitted ✅", { email, username, password });
 
-    try {
-      const response = await Axios.post('http://127.0.0.1:3002/register', {
-        email,
-        username,
-        password
-      });
-      console.log('User has been created', response.data);
+  try {
+    const response = await Axios.post("http://localhost:3002/register", {
+      email,
+      username,
+      password,
+    });
 
-      // Reset des champs
-      setEmail('');
-      setUserName('');
-      setPassword('');
-      setError("");
+    console.log("Backend response:", response.data);
 
-      // Navigation vers Login
-      navigate('/');
-    } catch (err) {
-      console.error('Error creating user:', err);
-      setError("Une erreur est survenue lors de la création du compte.");
+    if (response.status === 201) {
+      // ✅ Reset des champs
+      setEmail("");
+      setUserName("");
+      setPassword("");
+
+      // ✅ Navigation vers Login uniquement si succès
+      navigate("/");
+    } else {
+      setError(response.data.message || "Erreur inconnue du serveur");
+    }
+  } catch (err) {
+    console.error("Error creating user:", err);
+
+    if (err.response && err.response.data) {
+      setError(err.response.data.message || "Erreur lors de la création du compte.");
+    } else {
+      setError("Impossible de contacter le serveur.");
     }
   }
+};
+
+
 
   return (
     <div className='registerPage flex'>

@@ -7,8 +7,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { BsQuestionCircle } from "react-icons/bs";
 
 import img from '../../../../Assets/pic2.jpg'
-import img2 from '../../../../Assets/image.png'
-import video from '../../../../Assets/grass.mp4'
+
 
 const Top = ()=> {
     return (
@@ -34,47 +33,10 @@ const Top = ()=> {
             </div>
 
             <div className="cardSection flex">
-                <div className="rightCard flex">
-                    <h1>Create and sell extraordinary products</h1>
-                    <p>The world's fast growing industry today and natural made products</p>
-                    <div className="buttons flex">
-                        <button className='btn'>Explore More</button>
-                        <button className='btn transparent'>Top Sellers</button>
-                    </div>
-                    <div className="videoDiv">
-                        <video src={video} autoPlay loop muted></video>
-                    </div>
-                </div>
+                
 
                 <div className="leftCard flex">
-                    <div className="main flex">
-                        <div className="textDiv">
-                            <h1>My Stat</h1>
-
-                            <div className='flex'>
-                                <span>
-                                    Today <br /> <small>4 Orders</small>
-                                </span>
-                                <span>
-                                    This Month <br /> <small>127 Orders</small>
-                                </span>
-                            </div>
-
-                            <span className="flex link">
-                                Go to my orders <BsArrowRight className='icon'/>
-                            </span>
-
-
-                        </div>
-
-                        <div className="imgDiv">
-                            <img src={img2} alt="Image Name" />
-                        </div>
-                        
-
-                        
-            
-                    </div>
+                   
 
                     <div className="sideBarCard">
                         <BsQuestionCircle className="icon"/>
