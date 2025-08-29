@@ -1,12 +1,57 @@
-# React + Vite
+# React Login Page with Video Background (Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **React login page** built with **Vite**, featuring:
 
-Currently, two official plugins are available:
+- Video background
+- Styled login form with icons
+- Token-based authentication
+- Navigation using React Router
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive login page with video background.
+- Styled input fields with icons for email and password.
+- Error handling for invalid login.
+- Token-based authentication stored in `localStorage`.
+- Redirect to dashboard after successful login.
+- Link to registration page for new users.
+
+---
+
+## Technologies Used
+
+- React.js
+- Vite
+- React Router DOM
+- React Icons
+- CSS / Flexbox
+- Fetch API
+
+---
+
+## Project Structure
+
+/src
+/components
+/Login
+Login.js
+Login.css
+/LoginAssets
+grass.mp4
+Leaf.png
+App.js
+App.css
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/react-login-video.git
+cd react-login-video
+npm install
+npm run dev
